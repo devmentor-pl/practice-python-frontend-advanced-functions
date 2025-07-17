@@ -1,19 +1,13 @@
-let idInterval;
 let counter = 0;
-let idCounter;
 
-function showTime() {
+const runTimer = setInterval(function () {
     const time = (new Date()).toLocaleTimeString();
     console.log(time);
-}
-
-const showCounter = function () {
     counter++;
-
     if (counter >= 5) {
-        clearInterval(idInterval);
+        clearInterval(runTimer);
     }
-}
+}, 5000);
 
-idInterval = setInterval(showTime, 5000);
-idCounter = setInterval(showCounter, 5000);
+
+
